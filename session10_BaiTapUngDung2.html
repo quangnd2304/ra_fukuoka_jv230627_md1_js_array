@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập ứng dụng 2</title>
+</head>
+
+<body>
+    <script>
+        /*
+            1. Khai báo mảng 1 chiều không có phần tử
+            2. Nhập vào giá trị mảng 2 chiều gồm 3 dòng và 4 cột từ bàn phím
+            3. In ra các phần tử có giá trị chẵn trong mảng
+        */
+        //1.
+        let arr = [];
+        //2. Nhập giá trị mảng 2 chiều gồm 3 dòng và 4 cột
+        //i chạy theo dòng
+        for (let i = 0; i < 3; i++) {
+            //j chạy theo cột
+            let arrRow = [];
+            for (let j = 0; j < 4; j++) {
+                //Nhập dữ liệu cho một dòng -> mảng 1 chiều theo dòng
+                arrRow.push(Number(prompt("Nhập giá trị: ")));
+            }
+            //Thêm mảng arrRow vào mảng arr
+            arr.push(arrRow);
+        }
+        //in ra mảng sau khi nhập
+        console.log("Mảng sau khi nhập là:", arr);
+        //3. In các phần tử chẵn trong mảng
+        console.log("Các phần tử chẵn trong mảng là:");
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] % 2 == 0) {
+                    console.log(arr[i][j]);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 15</title>
+</head>
+
+<body>
+    <script>
+        /*
+            input: soTienGui, laiSuatNam, soThangGui = 3
+            process:
+                B1: laiSuatNam -> laiSuatThang
+                B2: Tinh tien dau thang và tien lai trong thang
+                    Thang 1: soTienDauThang = soTienGui, laiSuatThang = soTienDauThang*laiSuatThang
+                    Thang 2: soTienDauThang = soTienDauThang + laiSuatThang, laiSuatThang = soTienDauThang*laiSuatThang
+                    Thang 3: soTienDauThang = soTienDauThang + laiSuatThang, laiSuatThang = soTienDauThang*laiSuatThang
+            output: soTienNhanDuoc, tongLaiNhanDuoc
+        */
+        let soTienGui = Number(prompt("Nhập vào số tiền bạn gửi:"));
+        let laiSuatNam = Number(prompt("Nhập vào lãi suất năm: "));
+        let soThangGui = Number(prompt("Nhập vào số tháng gửi:"));
+        //B1: Tính lãi suất tháng
+        let laiSuatThang = laiSuatNam / 12;
+        //B2. Tính tiền đầu tháng và tiền lãi trong tháng
+        let soTienDauThang = soTienGui;
+        let tienLaiThang = 0;
+        for (let index = 0; index < soThangGui; index++) {
+            //Tinh tiền đầu tháng
+            soTienDauThang += tienLaiThang;
+            //Tính tiền lãi tháng
+            tienLaiThang = soTienDauThang * laiSuatThang;
+        }
+        //Tính tiền nhận được sau kỳ gửi
+        let soTienNhan = soTienDauThang + tienLaiThang;
+        //Tổng lãi suất nhận được
+        let tongLai = soTienNhan - soTienGui;
+        console.log("Tổng số tiền nhận được sau khi gửi tiết kiệm:", soTienNhan);
+        console.log("Tổng lãi suất nhận được sau khi gửi:", tongLai);
+
+    </script>
+</body>
+
+</html>

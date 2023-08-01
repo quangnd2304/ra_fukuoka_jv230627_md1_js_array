@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các hàm làm việc với mảng</title>
+</head>
+
+<body>
+    <script>
+        let arrInt = [2, 3, 4, 5];
+        //arrayName.push(item1,item2,...): Thêm các phần tử vào cuối mảng 
+        //Kết quả: trả về độ dài của mảng sau khi thêm
+        //-Thêm phần tử 6 và 7 vào sau mảng arrInt -> in ra độ dài mảng sau khi thêm
+        let arrLength = arrInt.push(6, 7);
+        console.log("Độ dài mảng sau khi thêm 6,7:", arrLength);
+        //-Thêm phần tử 8 vào cuối mảng
+        arrInt.push(8);
+        //arrayName.unshift(item1,item2,...): Thêm các phần tử vào đầu mảng
+        //Kết quả: trả về độ dài của mảng sau khi thêm
+        //-thêm phần tử 1 vào đầu mảng arrInt và in ra độ dài mảng sau khi thêm        
+        let arrLength1 = arrInt.unshift(1);
+        console.log("Độ dài mảng sáu khi thêm 1:", arrLength1);
+        //arrayName.pop(): Xóa 1 phần tử ở cuối mảng
+        //Kết quả: trả về giá trị phần tử vừa xóa
+        let elementDelete = arrInt.pop();
+        console.log("Giá trị phần tử vừa bị xóa là: ", elementDelete);
+        arrInt.pop();
+        //arrayName.shift():Xóa 1 phần tử ở đầu mảng
+        //Kết quả: trả về giá trị phần tử vừa xóa
+        let eledelete = arrInt.shift();
+        console.log("Giá trị phần tử vừa xóa là: ", eledelete);
+        console.log("Mảng arrInt:", arrInt);
+    </script>
+</body>
+
+</html>

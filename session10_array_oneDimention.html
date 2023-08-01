@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mảng 1 chiều</title>
+</head>
+
+<body>
+    <script>
+        //Khai báo mảng có tên là arrInt gồm 5 phần tử có giá trị là 2,4,6,8,10 - literal
+        let arrInt = [2, 4, 6, 8, 10];
+        //Khai báo mảng có tên là ra gồm 4 phần tử có giá trị là "Rikkei", "Academy", "Soft", 3 - Array        
+        let ra = new Array("Rikkei", "Academy", "Soft", 3);
+        //Thay đổi giá trị phần tử có chỉ số là 2 trong mảng ra thành "Học viện Rikkei"
+        ra[2] = "Học viện Rikkei";
+        //In ra giá trị các phần tử của mảng
+        console.log("Giá trị các phần tử mảng arrInt là: ", arrInt);
+        console.log("Giá trị các phần tử mảng ra là:", ra);
+        //In ra giá trị phần tử có chỉ số là 1 trong mảng ra
+        console.log("Giá trị phần tử có chỉ số là 1: ", ra[1]);
+        //In ra các số chia hết cho 3 trong mảng arrInt
+        //-Duyệt các phần tử của mảng
+        console.log("Giá trị các phần tử chia hết cho 3: ");
+        for (let i = 0; i < arrInt.length; i++) {
+            //-Truy cập vào từng phần tử, xét có chia hết cho 3 không -> có in ra
+            if (arrInt[i] % 3 == 0) {
+                console.log(arrInt[i]);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
